@@ -2,12 +2,18 @@
     "name": "Simulate Device Hack",
     "version": "1.0",
     "description": "Modify the navigator.platform while simulating a mobile viewport",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
             "js": ["contentscript.js"],
             "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["hack.js"],
+            "matches": ["<all_urls>"]
         }
     ]
   }
